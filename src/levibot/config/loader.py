@@ -16,6 +16,7 @@ class ConfigLoader():
             return ConfigModel(
                 token=config_raw_data["bot"]["token"],
                 owner_ids=config_raw_data["bot"]["owner_ids"],
+                prefix=config_raw_data["bot"]["prefix"],
             )
         except KeyError as exception:
             raise InvalidConfig() from exception

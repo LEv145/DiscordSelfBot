@@ -1,5 +1,5 @@
-# Work dir
-work_dir/
+# Secrets
+config.toml
 
 ### Python template
 # Byte-compiled / optimized / DLL files

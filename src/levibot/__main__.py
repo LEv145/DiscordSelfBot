@@ -8,10 +8,10 @@ from discord.ext import commands
 def main() -> None:
     print("Start")
 
-    loader = ConfigLoader(Path("work_dir/config.toml"))
+    loader = ConfigLoader(Path("config.toml"))
     config_data = loader.load()
 
-    bot = commands.Bot(command_prefix="$", self_bot=True)
+    bot = commands.Bot(command_prefix=config_data.prefix, self_bot=True)
     bot.owner_ids = config_data.owner_ids
 
 
