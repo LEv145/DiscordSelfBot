@@ -10,8 +10,16 @@ class ConfigLoader():
 
     def load(self) -> ConfigModel:
         with open(self._path) as fp:
-            data = toml.load(fp)
+            config_raw_data = toml.load(fp)
 
-        return ConfigModel(
-            token=data["bot"]["token"],
-        )
+        try:
+            return ConfigModel(
+                token=config_raw_data["bot"]["token"],
+                owner_ids=config_raw_data["bot"]["owner_ids"],
+            )
+        except KeyError as exception:
+            raise InvalidConfig() from exception
+
+
+class InvalidConfig(Exception):
+    ...
