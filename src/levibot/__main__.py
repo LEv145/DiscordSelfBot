@@ -6,7 +6,7 @@ from pathlib import Path
 from levibot.config import ConfigLoader, JishakuConfig
 
 from discord.ext import commands
-from jishaku.help_command import DefaultEmbedPaginatorHelp
+from jishaku.help_command import DefaultPaginatorHelp
 
 
 def set_jishaku_environ(config: JishakuConfig) -> None:
@@ -37,16 +37,16 @@ def main() -> None:
 
     bot = commands.Bot(
         command_prefix=config_data.bot_config.prefix,
-        help_command=DefaultEmbedPaginatorHelp(),
+        help_command=DefaultPaginatorHelp(),
+        owner_ids=config_data.bot_config.owner_ids,
         self_bot=True,
     )
-    bot.owner_ids = config_data.bot_config.owner_ids
 
 
     bot.load_extension("jishaku")
 
 
-    bot.run(config_data.bot_config.token)
+    bot.run(config_data.bot_config.token, bot=False)
 
 
 if __name__ == "__main__":
