@@ -2,3 +2,12 @@
 token = ""
 owner_ids = [501089151089770517, ]
 prefix = "!"
+
+[jishaku]
+retain = true
+no_underscore_prefix = true
+force_paginator = true
+no_dm_traceback = true
+always_dm_traceback = true
+use_ansi_always = true
+use_ansi_never = true

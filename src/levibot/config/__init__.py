@@ -1,8 +1,10 @@
 from .loader import ConfigLoader
-from .model import ConfigModel
+from .model import BaseConfig, BotConfig, JishakuConfig
 
 
 __all__ = (
     "ConfigLoader",
-    "ConfigModel",
+    "BaseConfig",
+    "BotConfig",
+    "JishakuConfig",
 )

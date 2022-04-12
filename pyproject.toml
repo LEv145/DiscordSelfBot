@@ -1,14 +1,14 @@
 [tool.poetry]
 name = "levibot"
-version = "0.1.0"
+version = "0.1.1"
 description = ""
 authors = ["lev"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
 "discord.py-self" = "^1.9.2"
-jishaku = "^2.4.0"
 toml = "^0.10.2"
+jishaku = "^2.4.0"
 
 [tool.poetry.dev-dependencies]
 
