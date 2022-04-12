@@ -11,19 +11,19 @@ from jishaku.help_command import DefaultEmbedPaginatorHelp
 
 def set_jishaku_environ(config: JishakuConfig) -> None:
     if config.retain:
-        os.environ["RETAIN"] = "true"
+        os.environ["JISHAKU_RETAIN"] = "true"
     if config.no_underscore_prefix:
-        os.environ["NO_UNDERSCORE"] = "true"
+        os.environ["JISHAKU_NO_UNDERSCORE"] = "true"
     if config.force_paginator:
-        os.environ["FORCE_PAGINATOR"] = "true"
+        os.environ["JISHAKU_FORCE_PAGINATOR"] = "true"
     if config.always_dm_traceback:
-        os.environ["ALWAYS_DM_TRACEBACK"] = "true"
+        os.environ["JISHAKU_ALWAYS_DM_TRACEBACK"] = "true"
     if config.no_dm_traceback:
-        os.environ["NO_DM_TRACEBACK"] = "true"
+        os.environ["JISHAKU_NO_DM_TRACEBACK"] = "true"
     if config.use_ansi_always:
-        os.environ["USE_ANSI_ALWAYS"] = "true"
+        os.environ["JISHAKU_USE_ANSI_ALWAYS"] = "true"
     if config.use_ansi_never:
-        os.environ["USE_ANSI_NEVER"] = "false"
+        os.environ["JISHAKU_USE_ANSI_NEVER"] = "false"
 
 
 def main() -> None:
